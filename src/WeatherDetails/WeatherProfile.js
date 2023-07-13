@@ -2,11 +2,15 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
+
 const WeatherProfile = () => {
   const [weatherProfile, setWeatherProfile] = useState(null);
   const [search, setSearch] = useState('');
   
+
   const searchHandler = (e) => {
+    
+
     
 
     axios
@@ -71,6 +75,7 @@ const WeatherProfile = () => {
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                     placeholder='Search Country/City'
+                    onKeyPress={handleKeyPress}
                 />
                 <button onClick={searchHandler} className='button'>
                 <FaSearch />
@@ -87,7 +92,7 @@ const WeatherProfile = () => {
                 <div className='details'>
                     <p>Weather condition: {weatherProfile.weather[0].main}</p>
                     <p>Weather description: {weatherProfile.weather[0].description}</p>
-                    <p>Temperature: {weatherProfile.main.temp}F</p>
+                    <p>Temperature: {weatherProfile.main.temp} °C</p>
                 </div>
                 </div>
             )}
