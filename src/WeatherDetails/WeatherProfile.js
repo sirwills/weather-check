@@ -10,7 +10,7 @@ const WeatherProfile = () => {
     
 
     axios
-      .get(`https://api.openweathermap.org/data/2.5/weather?q=${search}&units=imperial&appid=ecea87cbccb9d3b686ab4e636c026b28`)
+      .get(`https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=ecea87cbccb9d3b686ab4e636c026b28`)
       .then((res) => {
         setWeatherProfile(res.data);
       })
@@ -21,7 +21,7 @@ const WeatherProfile = () => {
 
   const getWeatherByLocation = (latitude, longitude) => {
     axios
-      .get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=ecea87cbccb9d3b686ab4e636c026b28`)
+      .get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=ecea87cbccb9d3b686ab4e636c026b28`)
       .then((res) => {
         setWeatherProfile(res.data);
       })
