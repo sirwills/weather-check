@@ -1,13 +1,210 @@
-body {
+/* Gloabl Styling */
+*
+{ 
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Styling for contents on App.js */
+
+.overal-container
+{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://images.pexels.com/photos/3941855/pexels-photo-3941855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.content-container
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.weather-check-info
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 100%; */
+  justify-content: center;
+}
+
+
+/* Styling for search component */
+
+.search-box
+{
+  display: flex;
+  align-items: center;
+  border: 3px solid whitesmoke;
+  width: 60%;
+  justify-content: center;
+  padding: 10px 30px 10px 30px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.search-input
+{
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+  color:white;
+}
+
+.button
+{
+  outline: none;
+  height: 100%;
+  width: 150px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(109, 109, 195);
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+}
+
+
+/* Styling for weatherProfile Component */
+
+.wearther-card 
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-top: 40px; */
+  width: 60%;
+  color: white;
+}
+
+.wearther-card p{
+  font-size: 20px;
+  color: whitesmoke;
+  font-weight: bold;
+  
+}
+
+.enviroment
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.search-enviroment
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  width: 100%;
+}
+
+/* MEDIA QUERRY FOR DIFFERENT SCREEN SIZES */
+
+/* Styles for screens between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .wearther-card{
+    font-size: 14px;
+  }
+
+  .button
+  {
+    width: 100px;
+  }
+
+  .search-box
+  {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .wearther-card 
+  {
+    width: 100%;
+  }
+}
+
+/* Styles for screens between 576px and 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+  .wearther-card{
+    font-size: 14px;
+  }
+
+  .button
+  {
+    width: 100px;
+  }
+
+  .search-box
+  {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .wearther-card 
+  {
+    width: 100%;
+  }
+}
+
+/* Styles for screens smaller than 576px */
+@media (max-width: 575px) {
+  .wearther-card p{
+    font-size: 14px;
+  }
+
+  .button
+  {
+    width: 100px;
+  }
+
+  .search-box
+  {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .wearther-card 
+  {
+    width: 100%;
+  }
+}
+
+@media (max-width: 310px) {
+  .wearther-card p{
+    font-size: 14px;
+  }
+
+  .button
+  {
+    width: 100px;
+  }
+
+  .search-box
+  {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .wearther-card 
+  {
+    width: 100%;
+  }
 }
